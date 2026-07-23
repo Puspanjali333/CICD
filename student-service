@@ -24,3 +24,9 @@ stage('sonar-scan') {
 
     }
 }
+
+stage('upload-to-nexus') {
+            steps {
+                sh 'mvn clean deploy'
+            }
+        }
