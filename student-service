@@ -9,6 +9,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Puspanjali333/student-service.git'
             }
         }
+
     stage('mvn-build') {
             steps {
                 sh 'mvn clean package'
@@ -30,3 +31,5 @@ stage('upload-to-nexus') {
                 sh 'mvn clean deploy'
             }
         }
+}
+}
